@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background:
+    linear-gradient(
+      135deg,
+      #050816,
+      #0f172a,
+      #111827
+    );
+
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Animated Background */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0,255,255,.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255,0,128,.15),
+      transparent 30%
+    );
+
+  z-index: -1;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06b6d4;
+  border-radius: 20px;
+}
+
+/* Glass Card */
+
+.glass {
+  background:
+    rgba(255,255,255,.05);
+
+  backdrop-filter:
+    blur(16px);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  box-shadow:
+    0 0 20px
+    rgba(0,255,255,.12);
+}
+
+/* Neon Buttons */
+
+.neon-btn {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00eaff,
+      #ff00cc
+    );
+
+  transition: .35s;
+  font-weight: 600;
+}
+
+.neon-btn:hover {
+  transform:
+    translateY(-3px)
+    scale(1.04);
+
+  box-shadow:
+    0 0 15px #00eaff,
+    0 0 30px #ff00cc;
+}
+
+/* Hover Animation */
+
+.card-hover {
+  transition: .35s;
+}
+
+.card-hover:hover {
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 0 25px
+    rgba(0,255,255,.3);
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+}
+
+.fade {
+  animation:
+    fadeUp .5s ease;
+}
+.glass:hover img{
+  transform:scale(1.08);
+}
+
+.glass:hover{
+  transform:
+    translateY(-10px);
+
+  box-shadow:
+    0 0 25px
+    rgba(0,234,255,.35);
+}
+
+.neon-btn{
+  transition:.35s;
+}
+
+.neon-btn:hover{
+  transform:
+    scale(1.05);
+
+  box-shadow:
+    0 0 15px #00eaff,
+    0 0 30px #ff00cc;
+}
